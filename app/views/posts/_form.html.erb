@@ -1,0 +1,14 @@
+
+	<hr class="style-six">
+
+	<%= form_for [@group, @post] do |f|%>
+		<%= f.label('內容：') %>
+		<%= f.text_area(:content , :class=> "form-control")%>
+
+	<hr class="style-six">
+
+	<div class="form-group">
+		<%= f.submit( :class=>"btn btn-primary")%>
+	</div>
+	<%end%>
+

@@ -1,0 +1,24 @@
+
+<hr class="style-six">
+
+	<%= form_for @group do |f|%>
+		<div class="form-group">
+			
+			<%= f.label('title') %>
+			<%= f.text_field(:title , :class => "form-control") %>
+		</div>
+
+		<div classs="form-group">
+			<%= f.label("description") %>
+			<%= f.text_area(:description , :class => "form-control") %>
+		</div>
+
+		
+		<hr class="style-six">
+
+		<div class="form-group">
+			<%= f.submit("create Group" , :class=>"btn btn-primary")%>
+		</div>
+
+	<%end%>
+

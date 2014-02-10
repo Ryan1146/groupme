@@ -1,12 +1,11 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use mysql as the database for Active Record
-gem 'mysql2'
 
-# Use SCSS for stylesheets
+
 gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
@@ -25,7 +24,44 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+#gem 'jbuilder', '~> 1.2'
+
+
+gem 'jquery-turbolinks'
+
 gem 'jbuilder', '~> 1.2'
+
+gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: 'master'
+
+
+
+gem 'devise', '~> 3.1.1'
+
+gem "paperclip", "~> 3.0"
+
+gem 'aws-sdk', "~> 1.20.0"
+
+gem 'masonry-rails', '~>0.2.0'
+
+gem 'will_paginate', '~> 3.0'
+
+gem 'will_paginate-bootstrap'
+
+
+
+
+
+#Heroku use the pg for database
+group :development, :test do
+	#gem 'sqlite3'
+	gem 'mysql2'
+end
+
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+end
+#end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
